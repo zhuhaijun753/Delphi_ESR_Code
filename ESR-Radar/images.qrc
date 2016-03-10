@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>Image/BCI_ICON.JPG</file>
+        <file>Image/checkbox.png</file>
+        <file>Image/down_arrow.png</file>
+        <file>Image/handle.png</file>
+    </qresource>
+</RCC>
