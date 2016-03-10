@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     fileio.cpp \
     rule.cpp \
     messagebox.cpp \
-    video.cpp
+    video.cpp \
+    videothread.cpp
 
 HEADERS  += widget.h \
     canconnect.h \
@@ -36,16 +37,28 @@ HEADERS  += widget.h \
     rule.h \
     mode.h \
     messagebox.h \
-    video.h
+    video.h \
+    videothread.h
 
 FORMS    += widget.ui \
     messagebox.ui \
     video.ui
 
-LIBS += -L$$PWD/../CANLIB_SIMPLE/ -lcanlib32
-
+#CANLIB
 INCLUDEPATH += $$PWD/../CANLIB_SIMPLE
 DEPENDPATH += $$PWD/../CANLIB_SIMPLE
+LIBS += -L$$PWD/../CANLIB_SIMPLE/ -lcanlib32
+
+#OPENCV
+INCLUDEPATH += $$PWD/../OPENCV/include
+DEPENDPATH += $$PWD/../OPENCV/include
+
+LIBS += -L$$PWD/../OPENCV/bin/libopencv_calib3d2411d.dll \
+        $$PWD/../OPENCV/bin/libopencv_contrib2411d.dll \
+        $$PWD/../OPENCV/bin/libopencv_core2411d.dll \
+        $$PWD/../OPENCV/bin/libopencv_features2d2411d.dll \
+        $$PWD/../OPENCV/bin/libopencv_highgui2411d.dll \
+        $$PWD/../OPENCV/bin/libopencv_imgproc2411d.dll \
 
 RESOURCES += \
     images.qrc

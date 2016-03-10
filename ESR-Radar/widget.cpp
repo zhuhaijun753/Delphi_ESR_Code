@@ -225,7 +225,11 @@ void Widget::on_CB_Video_clicked()
 {
     if(ui->CB_Video->isChecked()){
         my_video->setVisible(true);
+        my_video->set_state(true);
+        my_video->start();
     }else{
         my_video->setVisible(false);
+        my_video->set_state(false);
+        my_video->stop();
     }
 }
